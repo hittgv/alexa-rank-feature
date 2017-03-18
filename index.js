@@ -5,22 +5,8 @@ global.port = process.env.PORT || 3000;
 global.logger = require("winston");
 logger.level = process.env.LOG_LEVEL || "debug";
 
-//const alexa = require("alexarank");
-//app.post("/", function(req, res) {
-//    const url = req.url;
-//    
-//    alexa(url, function(err, result) {
-//        if(err) {
-//            logger.error(err);
-//            return res.status(500).send();
-//        }
-//
-//        return res.send(result);
-//    });
-//});
-
 const bodyParser = require("body-parser");
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: "20mb"}));
 
 const morgan = require("morgan");
 app.use(morgan('combined'));
