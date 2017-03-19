@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "build": "./build.sh",
-    "test": "mocha"
+    "test": "echo \"No Tests\""
   },
   "author": "Manthan Dave <manthanhd@live.com>",
   "license": "MIT",
