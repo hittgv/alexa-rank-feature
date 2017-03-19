@@ -20,6 +20,13 @@ app.post("/", function(req, res) {
             return res.status(500).send();
         }
 
+        result.engagement.bounceRate = parseFloat(result.engagement.bounceRate.split("%")[0]);
+        timeOnSite = result.engagement.dailyTimeOnSite.split(":");
+        minsOnSite = (timeOnSite[1]/60);
+        timeOnSite = parseFloat(timeOnSite[0]) + minsOnSite;
+        result.engagement.dailyTimeOnSite = timeOnSite;
+
+
         return res.send(result);
     });
 });
