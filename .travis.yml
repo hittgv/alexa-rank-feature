@@ -1,3 +1,10 @@
 language: node_js
 node_js:
-  - "stable"
+- stable
+deploy:
+  provider: heroku
+  api_key:
+    secure: IfuOrRb/6jGv1vssE17wMhmhli7fDOYW8YbQf8rVl58zcF53VGw3RAbyp6MrCPWXzVWXU4oxDlvZq3AG26HynT3GGR+KTF2leuc9HfQDAsRGjx+0M9DcujDT0nrhLEhAUeL6XyagQyafJRvQEIiBy7VYZN+nxue+2O7ZpgYTdhEfW+j40fpTJii/v6jtyZmE+UoVNe2k0xRtC3wYxTmkYhFJLUv+WHCtQke/FzYsnTwj9WwTUzzqgDM7B9u4+e7bCbq0zCgqnFZuyLWcG68eAlnvM9UU/c0QGPnm7PCqgWliyGMDqlijHffRbPiAm9xZ3q2NDNV5G9sHnRkeLkeM1cANYuok37utXnmNVWSMd56+/ixYb/5jjrQUI0BkaKg+aBUUC4jolfqyVx9RwjTYgXlu50UkSkNQMHE82RaRFGJmV2Z7Zo3T9syPUvAXG37BYifEZUlX5PeU0G3KkJC+gArQ+LYwnpDSEMAvh1qf5m+38adqhrXZiNBq6N6A5dRMDhxykmFvrMfOzbtEB/Re+VaFv2Kyug9+ugdj18NQzqqwFpVFeKaJbSoCGhR5rE+twG9c9H6t1y7tYMd/df6q18PD+/PWIrWxRP5FQSR8XYnU4qL4FAeo7igfm+l3wZhPzkP3oBi7szV5KA+4q+4eFIEDtWgt09CcB3h69kBVOfE=
+  app: alexar
+  on:
+    repo: hittgv/alexa-rank-feature
