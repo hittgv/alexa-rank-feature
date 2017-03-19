@@ -20,6 +20,11 @@ app.post("/", function(req, res) {
             return res.status(500).send();
         }
 
+        result.globalRank = result.globalRank.replace(/\,/g,'');
+        if(result.countryRank && result.countryRank.rank) {
+            result.countryRank.rank = result.countryRank.rank.replace(/\,/g,'');
+        }
+
         result.engagement.bounceRate = parseFloat(result.engagement.bounceRate.split("%")[0]);
         timeOnSite = result.engagement.dailyTimeOnSite.split(":");
         minsOnSite = (timeOnSite[1]/60);
